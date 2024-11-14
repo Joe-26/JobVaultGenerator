@@ -1,11 +1,26 @@
 import click
 import os
+from openai import OpenAI
 import shutil
 import time
 from docx import Document
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 
+
+def generate_cv_content(job_desc):
+    client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+    completion = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant that should only answer questions related to recipes, ingredients, calories, and cuisines. Any other topics prompted, respond with 'Invalid question.'"},
+            {
+                "role": "user",
+                "content": f" ENTER PROMPT "
+            }
+        ]
+    )
+    ai_response = completion.choices[0].message.content
 
 def make_cv(data):
     print(data['cv_info'].items())
@@ -88,6 +103,9 @@ def main(job_link):
 
     # Get Job Details from the website
     data["job_desc"] = make_jd_file(data['job_link'])
+
+    # Generate CV content
+    data['cv_info']['{CVCONTENT}'] = generate_cv_content(data['job_desc'])
 
     # Add data to CV_template  
     make_cv(data)
