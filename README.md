@@ -6,15 +6,18 @@
 2. [Features](#key-features)
 3. [Technologies Used](#technologies-used)
 4. [Installation Guide](#installation-guide)
-
+5. [To Do](#to-do)
 
 ## Project Overview
 
-**JobVaultGenerator** is a application built in Python using Selenium
+**JobVaultGenerator** is a Python-Selenium automation app that can create folders for jobs and place the respective resume, CV, and job description files for our records.
+
+Resources
+
 
 ## Key Features
-1. Feature One
-2. Feature Two
+1. Makes a company folder, and a Job Folder with a Sample CV, Resume, and Job Description image.
+2. Helps keep the records so they can be referred to in case selected for further rounds.
 
 ## Technologies Used
 1. Python
@@ -50,12 +53,12 @@ Follow these steps to get your project up and running locally.
 
 5. Clone the `mealMate` repository from GitHub:
    ```bash
-   git clone https://github.com/Joe-26/mealMate.git
+   git clone https://github.com/Joe-26/JobVaultGenerator.git
    ```
 
-6. Change to the `mealMate` directory:
+6. Change to the `JobVaultGenerator` directory:
    ```bash
-   cd mealMate
+   cd JobVaultGenerator
    ```
 
 7. Install the required Python dependencies listed in `requirements.txt`:
@@ -63,14 +66,9 @@ Follow these steps to get your project up and running locally.
    pip install -r requirements.txt
    ```
 
-8. Open the `.env` file to configure the environment settings:
-   ```bash
-   nano .env
-   ```
+8. Save the changes and exit the editor by pressing `Ctrl+X`, then confirm with `Y` to save.
+9. There is a `resume_store` folder, where you can place 4 resumes targeting different roles.
+10. In case, you need to change the names of the resumes in the resume_store, you'll also need to change the `copy_files` function and resume_num input message accordingly.
 
-9. In the `.env` file, add the following line to set your OpenAI API key (replace `{Your API Key}` with your actual API key):
-   ```bash
-   OPENAI_API_KEY="{Your API Key}"
-   ```
-
-10. Save the changes and exit the editor by pressing `Ctrl+X`, then confirming with `Y` to save.
+## To do
+Integrate the OpenAI API for generating the CV Content according to the job description.
