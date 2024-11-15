@@ -67,8 +67,9 @@ Follow these steps to get your project up and running locally.
    ```
 
 8. Save the changes and exit the editor by pressing `Ctrl+X`, then confirm with `Y` to save.
-9. There is a `resume_store` folder, where you can place 4 resumes targeting different roles.
-10. In case, you need to change the names of the resumes in the resume_store, you'll also need to change the `copy_files` function and resume_num input message accordingly.
+9. Change the path variable in the main function where you want all the Company folders to be created.
+10. There is a `resume_store` folder, where you can place 4 resumes targeting different roles.
+11. In case, you need to change the names of the resumes in the resume_store, you'll also need to change the `copy_files` function and resume_num input message accordingly.
 
 ## To do
-Integrate the OpenAI API for generating the CV Content according to the job description.
+Integrate the OpenAI API for generating the CV Content according to the job description and the profile.

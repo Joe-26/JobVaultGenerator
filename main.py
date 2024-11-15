@@ -21,21 +21,21 @@ def make_cv(data):
 def copy_files(path, resume_num, company, job_folder):
     # Copy resume.docx to Job folder
     if resume_num == 1:
-        shutil.copy(path+'resume_store/devops.docx', path+company+'/'+job_folder+'/Joseph_2024.docx')
+        shutil.copy('resume_store/devops.docx', path+company+'/'+job_folder+'/Joseph_2024.docx')
     elif resume_num == 2:
-        shutil.copy(path+'resume_store/data.docx', path+company+'/'+job_folder+'/Joseph_2024.docx')
+        shutil.copy('resume_store/data.docx', path+company+'/'+job_folder+'/Joseph_2024.docx')
     elif resume_num == 3:
-        shutil.copy(path+'resume_store/pythondev.docx', path+company+'/'+job_folder+'/Joseph_2024.docx')
+        shutil.copy('resume_store/pythondev.docx', path+company+'/'+job_folder+'/Joseph_2024.docx')
     elif resume_num == 4:
-        shutil.copy(path+'resume_store/javadev.docx', path+company+'/'+job_folder+'/Joseph_2024.docx')
+        shutil.copy('resume_store/javadev.docx', path+company+'/'+job_folder+'/Joseph_2024.docx')
     elif resume_num == 5:
-        shutil.copy(path+'resume_store/cloud.docx', path+company+'/'+job_folder+'/Joseph_2024.docx')
+        shutil.copy('resume_store/cloud.docx', path+company+'/'+job_folder+'/Joseph_2024.docx')
     
     # Copy cv.docx to Job folder
-    shutil.move(path+'CV.docx', path+company+'/'+job_folder+'/CV.docx')
+    shutil.move('CV.docx', path+company+'/'+job_folder+'/CV.docx')
 
     # Copy jd.pdf to Job folder
-    shutil.move(path+'JD.png', path+company+'/'+job_folder)
+    shutil.move('JD.png', path+company+'/'+job_folder)
 
 def make_jd_file(jobLink):
     options = Options()
@@ -78,10 +78,10 @@ def main(job_link):
     data["position"] = input('Enter Position: \n')
     data["resume_num"] = int(input('Which Resume?(enter number) \n1. DevOps \n2. Data \n3. PythonDev \n4. JavaDev \n5. Cloud\n'))
     data["cv_info"] = {
-        '{NAME}': 'Josephraj Velpula',
+        '{NAME}': 'firstname lastname',
         '{LOCATION}': 'Okemos, MI',
-        '{MOBILE}': '(404)-916-1803',
-        '{EMAILID}': 'V.josephraj26@gmail.com',
+        '{MOBILE}': '(123)-456-7890',
+        '{EMAILID}': 'name@gmail.com',
         '{DATE}': '14 November, 2024',
         '{COMPANY}': str(data['company'])
     }
