@@ -59,7 +59,11 @@ Follow these steps to get your project up and running locally.
 
 6. Change the `path` variable in the main function in `main.py` where you want all the Company folders to be created.
 7. There is a `resume_store` folder, where you can place 4 resumes targeting different roles.
-8. In case, you need to change the names of the resumes in the resume_store, you'll also need to change the `copy_files` function and resume_num input message accordingly.
+8. Run the following code for running the script:
+   ```bash
+   python main.py --joblink "company link for the job"
+   ```
+10. In case, you need to change the names of the resumes in the resume_store, you'll also need to change the `copy_files` function and resume_num input message accordingly.
 
 ## To do
 Integrate the OpenAI API for generating the CV Content according to the job description and the profile.
